@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Python Project</title>
+        
+        <!-- Bootstrap 4 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="jumbotron"> 
+            <h1>Search Results</h1>
+        </div>
+            {% for media in media %}                
+                <img src={{media}} style="width:400; height:200;">
+            {% endfor %}
+    </body>
+
+</html>
