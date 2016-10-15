@@ -5,7 +5,7 @@ app = Flask(__name__)
 import giphypop
 g = giphypop.Giphy()
 
-
+# main page
 @app.route('/')
 def index():
 	return render_template('index.html')
