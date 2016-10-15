@@ -6,12 +6,26 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
     </head>
     <body>
+        <nav class="navbar navbar-static-top navbar-dark bg-inverse">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><h15>Back to Search</h15></a>
+            </div>
+        </nav>
+        <br/>
+
         <!-- Shows what you searched -->
-        <div class="jumbotron"> 
-            <h1> {{message}} "{{keyword}}" </h1>
+        <div class="apc" style="text-align:center">
+            <h4> {{message}} "{{keyword}}" </h4>
         </div>
+         <div class="container">
+            <br/>
+            <div class="card-columns">
             {% for media in search_result %}                
-                <img src={{media}} style="width:400; height:200;">
+                <div class="card">
+                <img class="card-img-top" src={{media}} style="width:100%; height:auto;">
+                </div>
             {% endfor %}
+            </div>
+        </div>
     </body>
 </html>
