@@ -1,4 +1,3 @@
-import os
 from flask import Flask, render_template, request
 from googlefinance import getQuotes
 app = Flask(__name__)
@@ -23,11 +22,16 @@ def results():
 	results = g.search(search_result)
 	media = []
 
-	for result in results:
-		media.append(result.media_url)
+	try: 
+		for result in results:
+			media.append(result.media_url)
+			message = "Search Results"
+		return render_template('results.html', search_result=media, message=message)
+	except:
+		media = []
+		message = "Nothing Found"
+		return render_template('results.html', search_result=media, message=message)
 
-	return render_template('results.html', media=media)
 
+app.run(debug=True)
 
-port = int(os.environ.get("PORT", 5000))
-app.run(host="0.0.0.0", port=port)
