@@ -5,12 +5,12 @@ app = Flask(__name__)
 import giphypop
 g = giphypop.Giphy()
 
-# main page
+# Main Page
 @app.route('/')
 def index():
 	return render_template('index.html')
 
-
+# Project Group Introduction Page
 @app.route('/about')
 def about():
 	return render_template('about.html')
