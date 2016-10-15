@@ -7,11 +7,10 @@
     </head>
     <body>
         <div class="jumbotron"> 
-            <h1> {{message}} </h1>
+            <h1> {{message}} "{{keyword}}" </h1>
         </div>
             {% for media in search_result %}                
                 <img src={{media}} style="width:400; height:200;">
             {% endfor %}
     </body>
-
 </html>

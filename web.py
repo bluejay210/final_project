@@ -25,8 +25,9 @@ def results():
 	try: 
 		for result in results:
 			media.append(result.media_url)
-			message = "Search Results"
-		return render_template('results.html', search_result=media, message=message)
+			message = "Search Results for"
+			keyword = request.args.get('input')
+		return render_template('results.html', search_result=media, message=message, keyword=keyword)
 	except:
 		media = []
 		message = "Nothing Found"
