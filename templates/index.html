@@ -18,19 +18,19 @@
         <h3><em>Welcome to Yunghwan and Andrea's Webpage</em></h3>
 		</div>  
 
-		<div class="jumbotron">
+		<!-- Search Box -->
+        <div class="jumbotron">
             <div class="container">
-                <h1>Search all the GIFs</h1>
-            
-                <form action="/results" class="form-inline">
+                <h1>Search all the GIFs</h1>            
+                <form action="/results" class="form-inline" method="GET">
                 	<div class="form-group">
-                		<input type="text" name="input"
-                		palceholder="Enter a search input" class="form-control">
+                		<input type="text" name="input" id="search_box"
+                		placeholder="Enter a search input" autocomplete="on" class="form-control">
+                        <div class="autocomplete"></div>
                 	</div>
-                	<input type="submit" name="btn btn-primary">
+                	<input type="submit" name="btn btn-primary" class="active">
                 </form>
             </div>
         </div>		
-
 	</body>
 </html>

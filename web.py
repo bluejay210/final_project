@@ -15,24 +15,24 @@ def index():
 def about():
 	return render_template('about.html')
 
-
+# Search Page
 @app.route('/results')
 def results():
 	search_result = request.values.get('input')
 	results = g.search(search_result)
 	media = []
 
+# Search Page
 	try: 
 		for result in results:
 			media.append(result.media_url)
-			message = "Search Results for"
+			message = "Search Results : "
 			keyword = request.args.get('input')
 		return render_template('results.html', search_result=media, message=message, keyword=keyword)
+# Handle the situation when no gif search keyword is entered
 	except:
 		media = []
 		message = "Nothing Found"
 		return render_template('results.html', search_result=media, message=message)
 
-
 app.run(debug=True)
-
