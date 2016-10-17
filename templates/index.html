@@ -1,38 +1,44 @@
 <html>
-	<head>
-	<title>Python Final Project Mainpage</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
-	</head>
-	<body>
+    <head>
+        <!-- Webpgae Title -->
+        <title>Python Final Project Mainpage</title>
 
-            <nav class="navbar navbar-static-top navbar-dark bg-inverse">
-            <div class="container-fluid">
-                <!-- Linke to Project Group Introduction Page -->
-                <a class="navbar-brand" href="/about">[About Developers]</a>
-                <!-- Linke to GitHub Page -->
-                <a class="navbar-brand" href="https://github.com/bluejay210/final_project">[GitHub Page]</a>
-            </div>
-        </nav>
+        <!-- Bootstrap 4 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+    </head>
+    <body>
         <br/>
-		
-		<!-- Welcoming Message -->
-		<div class="alert alert-warning" role="alert" style="height:60;">
+                <!-- Linke to Project Group Introduction Page -->
+                <a class="btn btn-danger" href="/about"><strong>About Developers</strong></a>
+                <!-- Linke to GitHub Page -->
+                <a class="btn btn-danger" href="https://github.com/bluejay210/final_project"><strong>GitHub Page</strong></a>
+        <br/><br/>
+        
+        <!-- Welcoming Message -->
+        <div class="alert alert-warning" role="alert" style="height:60;">
         <h3><em>Welcome to Yunghwan and Andrea's Webpage</em></h3>
-		</div>  
+        </div>  
 
-		<!-- Search Box -->
+        <!-- Search Box -->
         <div class="jumbotron">
             <div class="container">
                 <h1>Search all the GIFs</h1>            
                 <form action="/results" class="form-inline" method="GET">
-                	<div class="form-group">
-                		<input type="text" name="input" id="search_box"
-                		placeholder="Enter a search input" autocomplete="on" class="form-control">
+                    <div class="form-group">
+                        <!-- Autocomplete Function -->
+                        <!-- Handle the situation when no gif search keyword is entered -->
+                        <input type="text" name="input" id="search_box"
+                        placeholder="Enter a search input" autocomplete="on" class="form-control" required="required">
                         <div class="autocomplete"></div>
-                	</div>
-                	<input type="submit" name="btn btn-primary" class="active">
+                    </div>
+                    <input type="submit" name="btn btn-primary" class="active">
                 </form>
             </div>
-        </div>		
-	</body>
+        </div>      
+    </body>
+    <!-- Footer -->
+            <hr>
+            <footer>
+                <p>© Yunghwan and Company 2016</p>
+            </footer>
 </html>

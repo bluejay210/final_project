@@ -1,4 +1,4 @@
-import os
+# import os
 from flask import Flask, render_template, request
 from googlefinance import getQuotes
 app = Flask(__name__)
@@ -23,14 +23,13 @@ def results():
 	results = g.search(search_result)
 	media = []
 
-# Search Page
+# Handle the situation when no gif file is found
 	try: 
 		for result in results:
 			media.append(result.media_url)
 			message = "Search Results : "
 			keyword = request.args.get('input')
 		return render_template('results.html', search_result=media, message=message, keyword=keyword)
-# Handle the situation when no gif search keyword is entered
 	except:
 		media = []
 		message = "Nothing Found"

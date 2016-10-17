@@ -1,6 +1,7 @@
 <html>
     <head>
-        <title>Python Final Project</title>
+        <!-- Webpgae Title -->
+        <title>Search Results</title>
         
         <!-- Bootstrap 4 CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
@@ -15,11 +16,13 @@
         </nav>
         <br/>
 
-        <!-- Shows what you searched -->
+        <!-- Show what you searched -->
         <div class="apc" style="text-align:center">
             <h4> {{message}} {{keyword}} </h4>
         </div>
-         <div class="container">
+
+        <!-- Display what you searched -->
+        <div class="container">
             <br/>
             <div class="card-columns">
             {% for media in search_result %}                
