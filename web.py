@@ -23,7 +23,7 @@ def results():
 	results = g.search(search_result)
 	media = []
 
-# Handle the situation when no gif file is found
+# Handle the situation when no gif file is found and when no gif search keyword is entered
 	try: 
 		for result in results:
 			media.append(result.media_url)
