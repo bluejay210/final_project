@@ -36,5 +36,6 @@ def results():
 		message = "Nothing Found"
 		return render_template('results.html', search_result=media, message=message)
 
-port = int(os.environ.get("PORT", 5000))
-app.run(host="0.0.0.0", port=port)
+app.run(debug=True)
+# port = int(os.environ.get("PORT", 5000))
+# app.run(host="0.0.0.0", port=port)
