@@ -1,4 +1,4 @@
-# import os
+import os
 from flask import Flask, render_template, request
 from googlefinance import getQuotes
 app = Flask(__name__)
